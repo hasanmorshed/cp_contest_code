@@ -120,15 +120,46 @@ istream &operator>>(istream &cin, vector<typC> &a)
 
 void solve()
 {
-    int n, m, k;
+    int n, m, k, bal;
     cin >> n >> m >> k;
     if (m == 1)
     {
         no;
         return;
     }
-    int bal = n / m;
-    int reminder = n % m;
+    if (n != m)
+    {
+        if (n % m != 0)
+        {
+            bal = n / m;
+            bal++;
+        }
+        else
+        {
+            bal = n / m;
+        }
+
+        int mou = n - bal;
+        if (mou > k)
+        {
+            yes;
+        }
+        else
+        {
+            no;
+        }
+    }
+    else
+    {
+        if (n - 1 > k)
+        {
+            yes;
+        }
+        else
+        {
+            no;
+        }
+    }
 }
 int main()
 {
