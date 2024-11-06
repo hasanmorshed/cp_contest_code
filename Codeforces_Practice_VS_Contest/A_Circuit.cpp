@@ -140,7 +140,7 @@ void solve()
             cnt_0++;
         }
     }
-    cout << (cnt_1 % 2) << " ";
+    cout << (cnt_1 % 2) << " ";        // minimum
     cout << min(cnt_0, cnt_1) << endl; // maximum
 }
 
